@@ -40,6 +40,12 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="inline-block mb-4">
+            <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm font-medium border border-orange-500/30">
+              Beta Release
+            </span>
+          </div>
+
           <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
             Monitor Vercel<br />
             from your menu bar
@@ -51,7 +57,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://github.com/CharlesSOo/Vship/releases/download/v1.0.0/VShip-1.0.0.dmg"
+              href="https://github.com/CharlesSOo/Vship/releases/download/v0.9.0/VShip-0.9.0.dmg"
               className="px-6 py-3 bg-white text-black rounded-md font-medium hover:bg-white/90 transition-colors text-center"
             >
               Download for macOS
@@ -59,7 +65,7 @@ export default function Home() {
           </div>
 
           <p className="text-sm text-white/40 mt-6">
-            macOS 15.0 or later • Free for personal use
+            macOS 15.0 or later • Free for personal use • Beta
           </p>
         </div>
       </section>
@@ -219,13 +225,13 @@ export default function Home() {
             Download VShip and keep track of your Vercel deployments from your menu bar.
           </p>
           <a
-            href="https://github.com/CharlesSOo/Vship/releases/download/v1.0.0/VShip-1.0.0.dmg"
+            href="https://github.com/CharlesSOo/Vship/releases/download/v0.9.0/VShip-0.9.0.dmg"
             className="inline-block px-8 py-4 bg-white text-black rounded-md font-medium text-lg hover:bg-white/90 transition-colors"
           >
-            Download VShip 1.0.0
+            Download VShip 0.9.0 Beta
           </a>
           <p className="text-sm text-white/40 mt-6">
-            Free for personal use • macOS 15.0+
+            Free for personal use • macOS 15.0+ • Beta Release
           </p>
         </div>
       </section>
