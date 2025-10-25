@@ -7,7 +7,7 @@ set -e
 
 # Configuration
 APP_NAME="VShip"
-DMG_NAME="VShip-1.0.0"
+DMG_NAME="VShip-0.9.0"
 SOURCE_APP="Export/VShip.app"
 DMG_TEMP="dmg_temp"
 FINAL_DMG="$DMG_NAME.dmg"

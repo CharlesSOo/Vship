@@ -5,8 +5,8 @@
 
 set -e
 
-VERSION="1.0.0"
-DMG_FILE="VShip-1.0.0.dmg"
+VERSION="0.9.0"
+DMG_FILE="VShip-0.9.0.dmg"
 REPO="CharlesSOo/Vship"
 
 echo "🚀 Creating GitHub Release for VShip v${VERSION}..."
