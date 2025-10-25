@@ -83,10 +83,15 @@ export default function Legal() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4">Trademarks</h2>
+              <h2 className="text-2xl font-semibold mb-4">Trademarks & Affiliation</h2>
+              <p className="text-white/60 leading-relaxed mb-4">
+                "Vercel" and the Vercel logo (triangle) are trademarks of Vercel Inc. VShip is an independent,
+                third-party project and is not officially affiliated with, endorsed by, or sponsored by Vercel Inc.
+              </p>
               <p className="text-white/60 leading-relaxed">
-                "Vercel" and the Vercel logo are trademarks of Vercel Inc. VShip is an independent project
-                and is not officially affiliated with, endorsed by, or sponsored by Vercel Inc.
+                All rights, title, and interest in and to the Vercel name, logo, and trademarks belong exclusively
+                to Vercel Inc. The use of the Vercel logo in this application is for identification purposes only
+                and does not imply any endorsement or partnership.
               </p>
             </section>
 

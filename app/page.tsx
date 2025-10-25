@@ -254,7 +254,11 @@ export default function Home() {
           </div>
 
           <div className="mt-8 pt-8 border-t border-white/10 text-center text-sm text-white/40">
-            <p>Made with ♥ for Vercel developers by <a href="https://x.com/_CharlesSO" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">@_CharlesSO</a></p>
+            <p className="mb-3">Made with ♥ for Vercel developers by <a href="https://x.com/_CharlesSO" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">@_CharlesSO</a></p>
+            <p className="text-xs">
+              VShip is an independent project and is not officially affiliated with, endorsed by, or sponsored by Vercel Inc.
+              "Vercel" and the Vercel logo are trademarks of Vercel Inc. All rights to Vercel and its trademarks belong to Vercel Inc.
+            </p>
           </div>
         </div>
       </footer>
