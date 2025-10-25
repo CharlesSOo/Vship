@@ -67,6 +67,76 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Installation Section */}
+      <section className="py-20 px-6 border-t border-white/10 bg-white/5">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+            Installation
+          </h2>
+
+          <div className="space-y-6">
+            <div className="p-6 bg-black/50 border border-white/10 rounded-lg">
+              <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                <span className="text-2xl">1️⃣</span>
+                Download and open VShip-0.9.0.dmg
+              </h3>
+              <p className="text-white/60 text-sm">
+                Drag VShip.app to your Applications folder
+              </p>
+            </div>
+
+            <div className="p-6 bg-black/50 border border-yellow-500/30 rounded-lg">
+              <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                <span className="text-2xl">2️⃣</span>
+                First time opening (important!)
+              </h3>
+              <p className="text-white/60 text-sm mb-4">
+                VShip isn't notarized yet, so macOS will show a security warning. Here's how to open it:
+              </p>
+
+              <div className="space-y-3">
+                <div className="pl-4 border-l-2 border-yellow-500/30">
+                  <p className="font-medium text-sm mb-1">Option 1: Right-click method</p>
+                  <ol className="text-white/60 text-sm space-y-1 list-decimal list-inside">
+                    <li>Right-click (or Control+click) on VShip.app</li>
+                    <li>Select "Open" from the menu</li>
+                    <li>Click "Open" in the dialog that appears</li>
+                  </ol>
+                </div>
+
+                <div className="pl-4 border-l-2 border-yellow-500/30">
+                  <p className="font-medium text-sm mb-1">Option 2: Terminal command</p>
+                  <code className="block text-xs bg-black/50 p-3 rounded border border-white/10 text-green-400 font-mono">
+                    xattr -cr /Applications/VShip.app
+                  </code>
+                  <p className="text-white/40 text-xs mt-2">Then open VShip normally</p>
+                </div>
+              </div>
+
+              <p className="text-white/40 text-xs mt-4">
+                ℹ️ You only need to do this once. After that, VShip will open normally.
+              </p>
+            </div>
+
+            <div className="p-6 bg-black/50 border border-white/10 rounded-lg">
+              <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                <span className="text-2xl">3️⃣</span>
+                Enter your Vercel API token
+              </h3>
+              <p className="text-white/60 text-sm">
+                Get your token from <a href="https://vercel.com/account/tokens" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">vercel.com/account/tokens</a>
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 p-4 bg-blue-500/10 border border-blue-500/30 rounded-lg">
+            <p className="text-sm text-white/60">
+              <strong className="text-white">Coming soon:</strong> Code signing and notarization to remove the security warning
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-20 px-6 border-t border-white/10">
         <div className="max-w-6xl mx-auto">
