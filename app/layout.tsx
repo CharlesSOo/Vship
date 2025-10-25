@@ -19,6 +19,28 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
+  openGraph: {
+    title: "VShip - Monitor Vercel from your menu bar",
+    description: "Native macOS menu bar app for real-time Vercel deployment monitoring. Free for personal use.",
+    url: 'https://vship-ccvhat41v-meckins-projects.vercel.app',
+    siteName: 'VShip',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'VShip - Monitor Vercel from your menu bar',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "VShip - Monitor Vercel from your menu bar",
+    description: "Native macOS menu bar app for real-time Vercel deployment monitoring. Free for personal use.",
+    images: ['/og-image.png'],
+  },
 };
 
 export default function RootLayout({
