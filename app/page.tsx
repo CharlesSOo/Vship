@@ -105,11 +105,12 @@ export default function Home() {
                 </div>
 
                 <div className="pl-4 border-l-2 border-yellow-500/30">
-                  <p className="font-medium text-sm mb-1">Option 2: Terminal command</p>
+                  <p className="font-medium text-sm mb-1">Option 2: Terminal command (recommended)</p>
+                  <p className="text-white/60 text-xs mb-2">Open Terminal and run:</p>
                   <code className="block text-xs bg-black/50 p-3 rounded border border-white/10 text-green-400 font-mono">
                     xattr -cr /Applications/VShip.app
                   </code>
-                  <p className="text-white/40 text-xs mt-2">Then open VShip normally</p>
+                  <p className="text-white/40 text-xs mt-2">This removes the quarantine flag. Then open VShip normally.</p>
                 </div>
               </div>
 
