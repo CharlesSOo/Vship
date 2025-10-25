@@ -34,13 +34,10 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-block mb-6">
-            <div className="w-20 h-20 mx-auto flex items-center justify-center">
+          <div className="flex flex-col items-center mb-6">
+            <div className="w-20 h-20 flex items-center justify-center mb-3">
               <div className="w-0 h-0 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent border-b-[68px] border-b-white"></div>
             </div>
-          </div>
-
-          <div className="inline-block mb-4">
             <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm font-medium border border-orange-500/30">
               Beta Release
             </span>
