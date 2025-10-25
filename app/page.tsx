@@ -56,7 +56,7 @@ export default function Home() {
           </div>
 
           <p className="text-sm text-white/40 mt-6">
-            macOS 15.0 or later • Free & Open Source
+            macOS 15.0 or later • Free for personal use
           </p>
         </div>
       </section>
@@ -219,7 +219,7 @@ export default function Home() {
             Download VShip 1.0.0
           </button>
           <p className="text-sm text-white/40 mt-6">
-            Free • Open Source • macOS 15.0+
+            Free for personal use • macOS 15.0+
           </p>
         </div>
       </section>

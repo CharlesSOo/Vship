@@ -81,10 +81,10 @@ export default function Privacy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4">Open Source</h2>
+              <h2 className="text-2xl font-semibold mb-4">Privacy First</h2>
               <p className="text-white/60 leading-relaxed">
-                VShip is open source software. You can review the complete source code to verify our
-                privacy practices and see exactly how the app works. Transparency is important to us.
+                VShip is built with privacy as the top priority. The app operates entirely locally on your
+                Mac with no data collection, analytics, or external tracking. Your data stays on your device.
               </p>
             </section>
 

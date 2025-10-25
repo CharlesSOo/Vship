@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "VShip - Monitor Vercel from your menu bar",
-  description: "VShip is a native macOS menu bar app that keeps you informed about your Vercel deployments in real-time. Free and open source.",
+  description: "VShip is a native macOS menu bar app that keeps you informed about your Vercel deployments in real-time. Free for personal use.",
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',

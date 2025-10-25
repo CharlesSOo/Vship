@@ -25,27 +25,33 @@ export default function Legal() {
             <section>
               <h2 className="text-2xl font-semibold mb-4">License</h2>
               <p className="text-white/60 leading-relaxed">
-                VShip is free and open source software released under the MIT License. You are free to use,
-                modify, and distribute the software in accordance with the terms of the license.
+                VShip is free software for personal and non-commercial use. You may use the software
+                at no cost, but you may not modify the source code or use it for commercial purposes.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4">MIT License</h2>
+              <h2 className="text-2xl font-semibold mb-4">VShip License Agreement</h2>
               <div className="bg-white/5 border border-white/10 rounded-lg p-6 font-mono text-sm text-white/80 leading-relaxed">
                 <p className="mb-4">Copyright (c) 2025 Charles</p>
+
+                <p className="mb-4 font-bold text-white">PERMITTED USES:</p>
                 <p className="mb-4">
-                  Permission is hereby granted, free of charge, to any person obtaining a copy
-                  of this software and associated documentation files (the "Software"), to deal
-                  in the Software without restriction, including without limitation the rights
-                  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-                  copies of the Software, and to permit persons to whom the Software is
-                  furnished to do so, subject to the following conditions:
+                  You are granted the right to download, install, and use this software ("VShip")
+                  free of charge for personal, non-commercial purposes only.
                 </p>
+
+                <p className="mb-4 font-bold text-white">RESTRICTIONS:</p>
                 <p className="mb-4">
-                  The above copyright notice and this permission notice shall be included in all
-                  copies or substantial portions of the Software.
+                  You may NOT:
+                  <br />• Modify, alter, or create derivative works of the source code
+                  <br />• Use the software for commercial purposes or financial gain
+                  <br />• Sell, rent, lease, or sublicense the software
+                  <br />• Remove or alter any copyright notices or branding
+                  <br />• Reverse engineer, decompile, or disassemble the software
                 </p>
+
+                <p className="mb-4 font-bold text-white">DISCLAIMER:</p>
                 <p>
                   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
                   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
