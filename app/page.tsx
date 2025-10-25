@@ -67,77 +67,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Installation Section */}
-      <section className="py-20 px-6 border-t border-white/10 bg-white/5">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-            Installation
-          </h2>
-
-          <div className="space-y-6">
-            <div className="p-6 bg-black/50 border border-white/10 rounded-lg">
-              <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                <span className="text-2xl">1️⃣</span>
-                Download and open VShip-0.9.0.dmg
-              </h3>
-              <p className="text-white/60 text-sm">
-                Drag VShip.app to your Applications folder
-              </p>
-            </div>
-
-            <div className="p-6 bg-black/50 border border-yellow-500/30 rounded-lg">
-              <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                <span className="text-2xl">2️⃣</span>
-                First time opening (important!)
-              </h3>
-              <p className="text-white/60 text-sm mb-4">
-                VShip isn't notarized yet, so macOS will show a security warning. Here's how to open it:
-              </p>
-
-              <div className="space-y-3">
-                <div className="pl-4 border-l-2 border-yellow-500/30">
-                  <p className="font-medium text-sm mb-1">Option 1: Right-click method</p>
-                  <ol className="text-white/60 text-sm space-y-1 list-decimal list-inside">
-                    <li>Right-click (or Control+click) on VShip.app</li>
-                    <li>Select "Open" from the menu</li>
-                    <li>Click "Open" in the dialog that appears</li>
-                  </ol>
-                </div>
-
-                <div className="pl-4 border-l-2 border-yellow-500/30">
-                  <p className="font-medium text-sm mb-1">Option 2: Terminal command (recommended)</p>
-                  <p className="text-white/60 text-xs mb-2">Open Terminal and run:</p>
-                  <code className="block text-xs bg-black/50 p-3 rounded border border-white/10 text-green-400 font-mono">
-                    xattr -cr /Applications/VShip.app
-                  </code>
-                  <p className="text-white/40 text-xs mt-2">This removes the quarantine flag. Then open VShip normally.</p>
-                </div>
-              </div>
-
-              <p className="text-white/40 text-xs mt-4">
-                ℹ️ You only need to do this once. After that, VShip will open normally.
-              </p>
-            </div>
-
-            <div className="p-6 bg-black/50 border border-white/10 rounded-lg">
-              <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                <span className="text-2xl">3️⃣</span>
-                Enter your Vercel API token
-              </h3>
-              <p className="text-white/60 text-sm">
-                Get your token from <a href="https://vercel.com/account/tokens" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">vercel.com/account/tokens</a>
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-8 p-4 bg-blue-500/10 border border-blue-500/30 rounded-lg">
-            <p className="text-sm text-white/60">
-              <strong className="text-white">Coming soon:</strong> Code signing and notarization to remove the security warning
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
       <section className="py-20 px-6 border-t border-white/10">
         <div className="max-w-6xl mx-auto">
@@ -301,6 +230,136 @@ export default function Home() {
           <p className="text-sm text-white/40 mt-6">
             Free for personal use • macOS 15.0+ • Beta Release
           </p>
+        </div>
+      </section>
+
+      {/* Installation Section */}
+      <section className="py-20 px-6 border-t border-white/10 bg-white/5">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+            Installation
+          </h2>
+
+          <div className="space-y-6">
+            <div className="p-6 bg-black/50 border border-white/10 rounded-lg">
+              <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                <span className="text-2xl">1️⃣</span>
+                Download and open VShip-0.9.0.dmg
+              </h3>
+              <p className="text-white/60 text-sm">
+                Drag VShip.app to your Applications folder
+              </p>
+            </div>
+
+            <div className="p-6 bg-black/50 border border-yellow-500/30 rounded-lg">
+              <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                <span className="text-2xl">2️⃣</span>
+                If you get a security warning
+              </h3>
+              <p className="text-white/60 text-sm mb-4">
+                VShip isn't code-signed yet. If macOS blocks it, use one of these methods:
+              </p>
+
+              <div className="space-y-3">
+                <div className="pl-4 border-l-2 border-yellow-500/30">
+                  <p className="font-medium text-sm mb-1">Option 1: Right-click method</p>
+                  <ol className="text-white/60 text-sm space-y-1 list-decimal list-inside">
+                    <li>Right-click VShip.app in Applications</li>
+                    <li>Select "Open"</li>
+                    <li>Click "Open" in the dialog</li>
+                  </ol>
+                </div>
+
+                <div className="pl-4 border-l-2 border-yellow-500/30">
+                  <p className="font-medium text-sm mb-1">Option 2: Terminal command (if reinstalling)</p>
+                  <p className="text-white/60 text-xs mb-2">Open Terminal and run:</p>
+                  <code className="block text-xs bg-black/50 p-3 rounded border border-white/10 text-green-400 font-mono">
+                    xattr -cr /Applications/VShip.app
+                  </code>
+                  <p className="text-white/40 text-xs mt-2">Then open VShip from Applications</p>
+                </div>
+              </div>
+
+              <p className="text-white/40 text-xs mt-4">
+                ℹ️ You only need to do this once
+              </p>
+            </div>
+
+            <div className="p-6 bg-black/50 border border-white/10 rounded-lg">
+              <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+                <span className="text-2xl">3️⃣</span>
+                Enter your Vercel API token
+              </h3>
+              <p className="text-white/60 text-sm">
+                Get your token from <a href="https://vercel.com/account/tokens" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">vercel.com/account/tokens</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-6 border-t border-white/10">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-6">
+            <div className="p-6 bg-white/5 border border-white/10 rounded-lg">
+              <h3 className="text-lg font-semibold mb-3">
+                Why does macOS say VShip can't be verified?
+              </h3>
+              <p className="text-white/60 text-sm">
+                VShip is currently unsigned because it requires a $99/year Apple Developer account. This is common for free indie Mac apps. Code signing and notarization are coming soon.
+              </p>
+            </div>
+
+            <div className="p-6 bg-white/5 border border-white/10 rounded-lg">
+              <h3 className="text-lg font-semibold mb-3">
+                Is my Vercel API token safe?
+              </h3>
+              <p className="text-white/60 text-sm">
+                Yes. Your API token is stored securely in macOS Keychain with system-level encryption. It's never saved in plain text and never leaves your computer. You can remove it anytime from VShip settings.
+              </p>
+            </div>
+
+            <div className="p-6 bg-white/5 border border-white/10 rounded-lg">
+              <h3 className="text-lg font-semibold mb-3">
+                What permissions does VShip need?
+              </h3>
+              <p className="text-white/60 text-sm">
+                VShip only needs network access to communicate with Vercel's API and notification permissions to show deployment updates. No other system permissions are required.
+              </p>
+            </div>
+
+            <div className="p-6 bg-white/5 border border-white/10 rounded-lg">
+              <h3 className="text-lg font-semibold mb-3">
+                Can I use VShip for commercial projects?
+              </h3>
+              <p className="text-white/60 text-sm">
+                VShip is free for personal use only. If you'd like to use it commercially or modify it, please reach out on <a href="https://x.com/_CharlesSO" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Twitter/X</a>.
+              </p>
+            </div>
+
+            <div className="p-6 bg-white/5 border border-white/10 rounded-lg">
+              <h3 className="text-lg font-semibold mb-3">
+                How do I update VShip?
+              </h3>
+              <p className="text-white/60 text-sm">
+                VShip checks for updates daily. When a new version is available, you'll see a notification. Click it to download the latest version from GitHub.
+              </p>
+            </div>
+
+            <div className="p-6 bg-white/5 border border-white/10 rounded-lg">
+              <h3 className="text-lg font-semibold mb-3">
+                Is VShip affiliated with Vercel?
+              </h3>
+              <p className="text-white/60 text-sm">
+                No. VShip is an independent project and is not officially affiliated with, endorsed by, or sponsored by Vercel Inc. "Vercel" is a trademark of Vercel Inc.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
