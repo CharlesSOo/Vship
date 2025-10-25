@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "VShip - Monitor Vercel from your menu bar",
     description: "Native macOS menu bar app for real-time Vercel deployment monitoring. Free for personal use.",
-    url: 'https://vship-ccvhat41v-meckins-projects.vercel.app',
+    url: 'https://vship-pl6ul8y9x-meckins-projects.vercel.app',
     siteName: 'VShip',
     images: [
       {
-        url: '/og-image.png',
+        url: '/api/og',
         width: 1200,
         height: 630,
         alt: 'VShip - Monitor Vercel from your menu bar',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "VShip - Monitor Vercel from your menu bar",
     description: "Native macOS menu bar app for real-time Vercel deployment monitoring. Free for personal use.",
-    images: ['/og-image.png'],
+    images: ['/api/og'],
   },
 };
 
