@@ -53,14 +53,6 @@ export default function Home() {
             <button className="px-6 py-3 bg-white text-black rounded-md font-medium hover:bg-white/90 transition-colors">
               Download for macOS
             </button>
-            <a
-              href="https://github.com/yourusername/vship"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-white/20 rounded-md font-medium hover:bg-white/5 transition-colors"
-            >
-              View on GitHub
-            </a>
           </div>
 
           <p className="text-sm text-white/40 mt-6">
@@ -257,14 +249,6 @@ export default function Home() {
                 className="hover:text-white transition-colors"
               >
                 Twitter (X)
-              </a>
-              <a
-                href="https://github.com/yourusername/vship"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors"
-              >
-                GitHub
               </a>
             </div>
           </div>
