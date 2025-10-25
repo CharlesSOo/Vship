@@ -1,0 +1,66 @@
+name: VShip
+options:
+  bundleIdPrefix: com.vship
+  deploymentTarget:
+    macOS: "15.0"
+  developmentLanguage: en
+  xcodeVersion: "16.0"
+  createIntermediateGroups: true
+
+settings:
+  SWIFT_VERSION: "5.0"
+  MARKETING_VERSION: "0.9.0"
+  CURRENT_PROJECT_VERSION: "1"
+  PRODUCT_NAME: VShip
+  INFOPLIST_KEY_NSHumanReadableCopyright: "Copyright © 2025. All rights reserved."
+
+targets:
+  VShip:
+    type: application
+    platform: macOS
+    deploymentTarget: "15.0"
+    sources:
+      - VShip/VShip/VShipApp.swift
+      - VShip/VShip/AppDelegate.swift
+      - VShip/VShip/Models
+      - VShip/VShip/Views
+      - VShip/VShip/Services
+      - VShip/VShip/Utilities
+    resources:
+      - VShip/VShip/Resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.vship.app
+        INFOPLIST_FILE: VShip/VShip/Info.plist
+        CODE_SIGN_ENTITLEMENTS: VShip/VShip/VShip.entitlements
+        CODE_SIGN_STYLE: Automatic
+        COMBINE_HIDPI_IMAGES: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ENABLE_PREVIEWS: YES
+        SWIFT_EMIT_LOC_STRINGS: YES
+        SWIFT_VERSION: "5.0"
+        MACOSX_DEPLOYMENT_TARGET: "15.0"
+        LD_RUNPATH_SEARCH_PATHS: $(inherited) @executable_path/../Frameworks
+        ENABLE_HARDENED_RUNTIME: YES
+    info:
+      path: VShip/VShip/Info.plist
+      properties:
+        CFBundleDevelopmentRegion: $(DEVELOPMENT_LANGUAGE)
+        CFBundleExecutable: $(EXECUTABLE_NAME)
+        CFBundleIdentifier: $(PRODUCT_BUNDLE_IDENTIFIER)
+        CFBundleInfoDictionaryVersion: "6.0"
+        CFBundleName: $(PRODUCT_NAME)
+        CFBundlePackageType: $(PRODUCT_BUNDLE_PACKAGE_TYPE)
+        CFBundleShortVersionString: "1.0.0"
+        CFBundleVersion: "1"
+        LSMinimumSystemVersion: $(MACOSX_DEPLOYMENT_TARGET)
+        LSUIElement: true
+        NSHumanReadableCopyright: "Copyright © 2025. All rights reserved."
+    entitlements:
+      path: VShip/VShip/VShip.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.network.client: true
+        keychain-access-groups:
+          - $(AppIdentifierPrefix)com.vship.app
