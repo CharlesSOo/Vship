@@ -83,7 +83,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Real-time Status</h3>
               <p className="text-white/60">
-                Color-coded triangle indicator shows deployment status at a glance. Green for success, yellow for building, red for errors.
+                See your deployment status instantly in the menu bar. Click the triangle to view detailed deployment information including commit messages, branches, and timestamps.
               </p>
             </div>
 
@@ -95,7 +95,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Secure by Default</h3>
               <p className="text-white/60">
-                Your Vercel API token is stored securely in macOS Keychain. Never saved in plain text.
+                Your Vercel API token is stored securely in macOS Keychain with system-level encryption. Never saved in plain text. Remove it anytime from settings.
               </p>
             </div>
 
@@ -107,22 +107,55 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Native Performance</h3>
               <p className="text-white/60">
-                Built with Swift and SwiftUI for a fast, lightweight experience. Automatic light/dark mode support.
+                Built with Swift and SwiftUI for a fast, lightweight experience. Automatic light/dark mode support with zero battery impact.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Screenshot Section */}
+      {/* Status Indicators Section */}
       <section className="py-20 px-6 border-t border-white/10">
         <div className="max-w-4xl mx-auto">
-          <div className="rounded-lg border border-white/10 p-1 bg-gradient-to-b from-white/5 to-transparent">
-            <div className="bg-black rounded-md p-8 text-center">
-              <p className="text-white/40 mb-4">Screenshot placeholder</p>
-              <div className="aspect-video bg-white/5 rounded-md flex items-center justify-center">
-                <div className="w-0 h-0 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent border-b-[68px] border-b-white/20"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+            Know your deployment status at a glance
+          </h2>
+          <p className="text-center text-white/60 mb-12 max-w-2xl mx-auto">
+            The menu bar triangle changes color based on your latest deployment status
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Green - Success */}
+            <div className="border border-white/10 rounded-lg p-8 text-center">
+              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <div className="w-0 h-0 border-l-[26px] border-l-transparent border-r-[26px] border-r-transparent border-b-[44px] border-b-green-500"></div>
               </div>
+              <h3 className="text-xl font-semibold mb-2 text-green-500">Ready</h3>
+              <p className="text-white/60 text-sm">
+                Deployment successful and live
+              </p>
+            </div>
+
+            {/* Yellow - Building */}
+            <div className="border border-white/10 rounded-lg p-8 text-center">
+              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <div className="w-0 h-0 border-l-[26px] border-l-transparent border-r-[26px] border-r-transparent border-b-[44px] border-b-yellow-500"></div>
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-yellow-500">Building</h3>
+              <p className="text-white/60 text-sm">
+                Deployment in progress
+              </p>
+            </div>
+
+            {/* Red - Error */}
+            <div className="border border-white/10 rounded-lg p-8 text-center">
+              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <div className="w-0 h-0 border-l-[26px] border-l-transparent border-r-[26px] border-r-transparent border-b-[44px] border-b-red-500"></div>
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-red-500">Error</h3>
+              <p className="text-white/60 text-sm">
+                Deployment failed or canceled
+              </p>
             </div>
           </div>
         </div>
