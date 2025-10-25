@@ -1,65 +1,246 @@
-import Image from "next/image";
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-black text-white">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full border-b border-white/10 bg-black/80 backdrop-blur-md z-50">
+        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 flex items-center justify-center">
+              <div className="w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[20px] border-b-white"></div>
+            </div>
+            <span className="font-semibold text-lg">VShip</span>
+          </div>
+          <div className="flex items-center gap-6">
+            <Link href="/privacy" className="text-sm text-white/60 hover:text-white transition-colors">
+              Privacy
+            </Link>
+            <Link href="/legal" className="text-sm text-white/60 hover:text-white transition-colors">
+              Legal
+            </Link>
+            <a
+              href="https://x.com/_CharlesSO"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-white/60 hover:text-white transition-colors"
+            >
+              @_CharlesSO
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-block mb-6">
+            <div className="w-20 h-20 mx-auto flex items-center justify-center">
+              <div className="w-0 h-0 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent border-b-[68px] border-b-white"></div>
+            </div>
+          </div>
+
+          <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
+            Monitor Vercel<br />
+            from your menu bar
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+
+          <p className="text-xl text-white/60 mb-12 max-w-2xl mx-auto">
+            VShip is a native macOS menu bar app that keeps you informed about your Vercel deployments in real-time.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-6 py-3 bg-white text-black rounded-md font-medium hover:bg-white/90 transition-colors">
+              Download for macOS
+            </button>
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://github.com/yourusername/vship"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border border-white/20 rounded-md font-medium hover:bg-white/5 transition-colors"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              View on GitHub
+            </a>
+          </div>
+
+          <p className="text-sm text-white/40 mt-6">
+            macOS 15.0 or later • Free & Open Source
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-6 border-t border-white/10">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">
+            Built for developers
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="p-8 border border-white/10 rounded-lg">
+              <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-white/5">
+                <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[16px] border-b-green-500"></div>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Real-time Status</h3>
+              <p className="text-white/60">
+                Color-coded triangle indicator shows deployment status at a glance. Green for success, yellow for building, red for errors.
+              </p>
+            </div>
+
+            <div className="p-8 border border-white/10 rounded-lg">
+              <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-white/5">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Secure by Default</h3>
+              <p className="text-white/60">
+                Your Vercel API token is stored securely in macOS Keychain. Never saved in plain text.
+              </p>
+            </div>
+
+            <div className="p-8 border border-white/10 rounded-lg">
+              <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-white/5">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Native Performance</h3>
+              <p className="text-white/60">
+                Built with Swift and SwiftUI for a fast, lightweight experience. Automatic light/dark mode support.
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
-  );
+      </section>
+
+      {/* Screenshot Section */}
+      <section className="py-20 px-6 border-t border-white/10">
+        <div className="max-w-4xl mx-auto">
+          <div className="rounded-lg border border-white/10 p-1 bg-gradient-to-b from-white/5 to-transparent">
+            <div className="bg-black rounded-md p-8 text-center">
+              <p className="text-white/40 mb-4">Screenshot placeholder</p>
+              <div className="aspect-video bg-white/5 rounded-md flex items-center justify-center">
+                <div className="w-0 h-0 border-l-[40px] border-l-transparent border-r-[40px] border-r-transparent border-b-[68px] border-b-white/20"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Customization Section */}
+      <section className="py-20 px-6 border-t border-white/10">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">
+            Customize to your preference
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">Triangle Styles</h3>
+              <p className="text-white/60 mb-6">
+                Choose between bordered or solid triangle indicators. Customize the icon color for optimal visibility on any wallpaper.
+              </p>
+              <ul className="space-y-3 text-white/60">
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span>Colored border with white/black fill</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span>Solid status color fill</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span>Automatic timeout after successful deployments</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">Success Timeouts</h3>
+              <p className="text-white/60 mb-6">
+                Reduce visual clutter by automatically fading the success indicator after a configurable timeout period.
+              </p>
+              <ul className="space-y-3 text-white/60">
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span>5, 10, 30 minutes, or 1 hour options</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span>Green indicator fades to white/black after timeout</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span>Resets on new deployment activity</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-6 border-t border-white/10">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Start monitoring today
+          </h2>
+          <p className="text-xl text-white/60 mb-8">
+            Download VShip and keep track of your Vercel deployments from your menu bar.
+          </p>
+          <button className="px-8 py-4 bg-white text-black rounded-md font-medium text-lg hover:bg-white/90 transition-colors">
+            Download VShip 1.0.0
+          </button>
+          <p className="text-sm text-white/40 mt-6">
+            Free • Open Source • macOS 15.0+
+          </p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/10 py-12 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex items-center gap-2">
+              <div className="w-5 h-5 flex items-center justify-center">
+                <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[16px] border-b-white"></div>
+              </div>
+              <span className="font-semibold">VShip</span>
+            </div>
+
+            <div className="flex items-center gap-6 text-sm text-white/60">
+              <Link href="/privacy" className="hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/legal" className="hover:text-white transition-colors">
+                Legal
+              </Link>
+              <a
+                href="https://x.com/_CharlesSO"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                Twitter (X)
+              </a>
+              <a
+                href="https://github.com/yourusername/vship"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-8 pt-8 border-t border-white/10 text-center text-sm text-white/40">
+            <p>Made with ♥ for Vercel developers by <a href="https://x.com/_CharlesSO" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">@_CharlesSO</a></p>
+          </div>
+        </div>
+      </footer>
+    </main>
+  )
 }
