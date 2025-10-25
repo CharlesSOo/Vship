@@ -10,8 +10,10 @@ import SwiftUI
 struct SettingsView: View {
     @ObservedObject var deploymentService: DeploymentService
     @StateObject private var appSettings = AppSettings.shared
+    @StateObject private var updateChecker = UpdateChecker.shared
     @Environment(\.dismiss) var dismiss
     @State private var showingSignOutAlert = false
+    @State private var isCheckingForUpdates = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -35,8 +37,9 @@ struct SettingsView: View {
             Divider()
 
             // Content
-            VStack(alignment: .leading, spacing: 20) {
-                // Account section
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    // Account section
                 VStack(alignment: .leading, spacing: 12) {
                     Text("Account")
                         .font(.headline)
@@ -136,6 +139,86 @@ struct SettingsView: View {
                     .cornerRadius(8)
                 }
 
+                // Notifications section
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("Notifications")
+                        .font(.headline)
+                        .fontWeight(.medium)
+
+                    VStack(alignment: .leading, spacing: 12) {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Toggle("Update Notifications", isOn: $appSettings.updateNotificationsEnabled)
+                                .font(.subheadline)
+
+                            Text("Show notifications when new versions are available")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+
+                        Divider()
+
+                        VStack(alignment: .leading, spacing: 4) {
+                            Toggle("Deployment Notifications", isOn: $appSettings.deploymentNotificationsEnabled)
+                                .font(.subheadline)
+
+                            Text("Show notifications for deployment status changes")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+
+                        Divider()
+
+                        VStack(alignment: .leading, spacing: 4) {
+                            Button(action: {
+                                isCheckingForUpdates = true
+                                updateChecker.checkForUpdates()
+
+                                // Reset the checking state after a delay
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                    isCheckingForUpdates = false
+                                }
+                            }) {
+                                HStack {
+                                    Text(isCheckingForUpdates ? "Checking..." : "Check for Updates")
+                                        .font(.subheadline)
+
+                                    Spacer()
+
+                                    if isCheckingForUpdates {
+                                        ProgressView()
+                                            .scaleEffect(0.7)
+                                            .frame(width: 16, height: 16)
+                                    } else {
+                                        Image(systemName: "arrow.down.circle")
+                                            .foregroundColor(.secondary)
+                                    }
+                                }
+                                .contentShape(Rectangle())
+                            }
+                            .buttonStyle(.plain)
+                            .disabled(isCheckingForUpdates)
+
+                            if updateChecker.updateAvailable {
+                                HStack(spacing: 4) {
+                                    Image(systemName: "checkmark.circle.fill")
+                                        .foregroundColor(.green)
+                                        .font(.caption)
+                                    Text("Version \(updateChecker.latestVersion) available")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                }
+                            } else if !isCheckingForUpdates {
+                                Text("You're up to date")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                    }
+                    .padding()
+                    .background(Color(NSColor.controlBackgroundColor))
+                    .cornerRadius(8)
+                }
+
                 // About section
                 VStack(alignment: .leading, spacing: 12) {
                     Text("About")
@@ -197,8 +280,9 @@ struct SettingsView: View {
                     .buttonStyle(.plain)
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
+                }
+                .padding()
             }
-            .padding()
         }
         .frame(width: 360, height: 680)
         .background(Color(NSColor.windowBackgroundColor))

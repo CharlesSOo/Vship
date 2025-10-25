@@ -87,6 +87,18 @@ class AppSettings: ObservableObject {
         }
     }
 
+    @Published var updateNotificationsEnabled: Bool {
+        didSet {
+            defaults.set(updateNotificationsEnabled, forKey: "updateNotificationsEnabled")
+        }
+    }
+
+    @Published var deploymentNotificationsEnabled: Bool {
+        didSet {
+            defaults.set(deploymentNotificationsEnabled, forKey: "deploymentNotificationsEnabled")
+        }
+    }
+
     init() {
         // Default to white
         if let savedColor = defaults.string(forKey: iconColorKey),
@@ -110,6 +122,20 @@ class AppSettings: ObservableObject {
             self.triangleStyle = style
         } else {
             self.triangleStyle = .border
+        }
+
+        // Default to update notifications enabled
+        if defaults.object(forKey: "updateNotificationsEnabled") != nil {
+            self.updateNotificationsEnabled = defaults.bool(forKey: "updateNotificationsEnabled")
+        } else {
+            self.updateNotificationsEnabled = true
+        }
+
+        // Default to deployment notifications enabled
+        if defaults.object(forKey: "deploymentNotificationsEnabled") != nil {
+            self.deploymentNotificationsEnabled = defaults.bool(forKey: "deploymentNotificationsEnabled")
+        } else {
+            self.deploymentNotificationsEnabled = true
         }
     }
 }

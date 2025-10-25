@@ -51,6 +51,15 @@ struct ContentView: View {
 
                     Spacer()
 
+                    Button(action: {
+                        NSApplication.shared.terminate(nil)
+                    }) {
+                        Image(systemName: "power")
+                            .foregroundColor(.red)
+                    }
+                    .buttonStyle(.plain)
+                    .help("Quit VShip")
+
                     Button(action: { deploymentService.fetchDeployments() }) {
                         Image(systemName: "arrow.clockwise")
                             .foregroundColor(.secondary)
@@ -129,24 +138,6 @@ struct ContentView: View {
                         .padding(.vertical, 8)
                     }
                 }
-
-                // Footer with Quit button
-                Divider()
-
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        NSApplication.shared.terminate(nil)
-                    }) {
-                        Text("Quit VShip")
-                            .font(.caption)
-                            .foregroundColor(.secondary)
-                    }
-                    .buttonStyle(.plain)
-                    Spacer()
-                }
-                .padding(.vertical, 8)
-                .background(Color(NSColor.controlBackgroundColor))
             }
         }
         .frame(width: 360, height: 500)

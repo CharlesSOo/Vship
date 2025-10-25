@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AppKit
 import UserNotifications
 import Combine
 
@@ -103,6 +104,12 @@ class UpdateChecker: ObservableObject {
     }
 
     private func showUpdateNotification(version: String, url: String) {
+        // Check if user has notifications enabled
+        guard AppSettings.shared.updateNotificationsEnabled else {
+            print("Update notifications disabled in settings")
+            return
+        }
+
         let content = UNMutableNotificationContent()
         content.title = "VShip Update Available"
         content.body = "Version \(version) is now available. Click to download."
