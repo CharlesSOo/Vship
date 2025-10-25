@@ -50,9 +50,12 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-6 py-3 bg-white text-black rounded-md font-medium hover:bg-white/90 transition-colors">
+            <a
+              href="https://github.com/CharlesSOo/Vship/releases/download/v1.0.0/VShip-1.0.0.dmg"
+              className="px-6 py-3 bg-white text-black rounded-md font-medium hover:bg-white/90 transition-colors text-center"
+            >
               Download for macOS
-            </button>
+            </a>
           </div>
 
           <p className="text-sm text-white/40 mt-6">
@@ -215,9 +218,12 @@ export default function Home() {
           <p className="text-xl text-white/60 mb-8">
             Download VShip and keep track of your Vercel deployments from your menu bar.
           </p>
-          <button className="px-8 py-4 bg-white text-black rounded-md font-medium text-lg hover:bg-white/90 transition-colors">
+          <a
+            href="https://github.com/CharlesSOo/Vship/releases/download/v1.0.0/VShip-1.0.0.dmg"
+            className="inline-block px-8 py-4 bg-white text-black rounded-md font-medium text-lg hover:bg-white/90 transition-colors"
+          >
             Download VShip 1.0.0
-          </button>
+          </a>
           <p className="text-sm text-white/40 mt-6">
             Free for personal use • macOS 15.0+
           </p>
